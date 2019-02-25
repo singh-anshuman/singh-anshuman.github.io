@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9834c7db-70cf-47de-87b2-4c8830b383af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="444" column="42" lean-forward="true" selection-start-line="444" selection-start-column="42" selection-end-line="444" selection-end-column="42" />
+            <state relative-caret-position="508">
+              <caret line="450" column="24" selection-start-line="450" selection-start-column="24" selection-end-line="450" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -87,16 +88,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551119270580</updated>
-      <workItem from="1551119272876" duration="550000" />
+      <workItem from="1551119272876" duration="977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="550000" />
+    <option name="totallyTimeSpent" value="977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -134,8 +134,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="444" column="42" lean-forward="true" selection-start-line="444" selection-start-column="42" selection-end-line="444" selection-end-column="42" />
+        <state relative-caret-position="508">
+          <caret line="450" column="24" selection-start-line="450" selection-start-column="24" selection-end-line="450" selection-end-column="24" />
         </state>
       </provider>
     </entry>
