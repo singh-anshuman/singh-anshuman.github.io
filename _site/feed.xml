@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-26T01:04:07+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Strata by HTML5 UP</title><subtitle>**I am Strata**, a super simple responsive site template freebie crafted by [HTML5 UP](http://html5up.net).
+</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2016-02-09T22:45:11+05:30</published><updated>2016-02-09T22:45:11+05:30</updated><id>http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/preview.jpg" /></entry><entry><title type="html">Styles from Strata</title><link href="http://localhost:4000/styles/2016/02/08/styles.html" rel="alternate" type="text/html" title="Styles from Strata" /><published>2016-02-08T00:00:00+05:30</published><updated>2016-02-08T00:00:00+05:30</updated><id>http://localhost:4000/styles/2016/02/08/styles</id><content type="html" xml:base="http://localhost:4000/styles/2016/02/08/styles.html">&lt;!-- One --&gt;
+	&lt;section id=&quot;one&quot;&gt;
+		&lt;header class=&quot;major&quot;&gt;
+			&lt;h2&gt;Ipsum lorem dolor aliquam ante commodo&lt;br /&gt;
+			magna sed accumsan arcu neque.&lt;/h2&gt;
+		&lt;/header&gt;
+		&lt;p&gt;Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.&lt;/p&gt;
+		&lt;ul class=&quot;actions&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Learn More&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+
+&lt;!-- Two --&gt;
+	&lt;section id=&quot;two&quot;&gt;
+		&lt;h2&gt;Recent Work&lt;/h2&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;article class=&quot;6u 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/01.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Magna sed consequat tempus&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article class=&quot;6u$ 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/02.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Ultricies lacinia interdum&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article class=&quot;6u 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/03.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Tortor metus commodo&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article class=&quot;6u$ 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/04.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/04.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Quam neque phasellus&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article class=&quot;6u 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/05.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Nunc enim commodo aliquet&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article class=&quot;6u$ 12u$(xsmall) work-item&quot;&gt;
+				&lt;a href=&quot;/images/fulls/06.jpg&quot; class=&quot;image fit thumb&quot;&gt;&lt;img src=&quot;/images/thumbs/06.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;h3&gt;Risus ornare lacinia&lt;/h3&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nisl sed nullam feugiat.&lt;/p&gt;
+			&lt;/article&gt;
+		&lt;/div&gt;
+		&lt;ul class=&quot;actions&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Full Portfolio&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+
+&lt;!-- Three --&gt;
+	&lt;section id=&quot;three&quot;&gt;
+		&lt;h2&gt;Get In Touch&lt;/h2&gt;
+		&lt;p&gt;Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.&lt;/p&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;8u 12u$(small)&quot;&gt;
+				&lt;form method=&quot;post&quot; action=&quot;#&quot;&gt;
+					&lt;div class=&quot;row uniform 50%&quot;&gt;
+						&lt;div class=&quot;6u 12u$(xsmall)&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; /&gt;&lt;/div&gt;
+						&lt;div class=&quot;6u$ 12u$(xsmall)&quot;&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot; /&gt;&lt;/div&gt;
+						&lt;div class=&quot;12u$&quot;&gt;&lt;textarea name=&quot;message&quot; id=&quot;message&quot; placeholder=&quot;Message&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/form&gt;
+				&lt;ul class=&quot;actions&quot;&gt;
+					&lt;li&gt;&lt;input type=&quot;submit&quot; value=&quot;Send Message&quot; /&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;4u$ 12u$(small)&quot;&gt;
+				&lt;ul class=&quot;labeled-icons&quot;&gt;
+					&lt;li&gt;
+						&lt;h3 class=&quot;icon fa-home&quot;&gt;&lt;span class=&quot;label&quot;&gt;Address&lt;/span&gt;&lt;/h3&gt;
+						1234 Somewhere Rd.&lt;br /&gt;
+						Nashville, TN 00000&lt;br /&gt;
+						United States
+					&lt;/li&gt;
+					&lt;li&gt;
+						&lt;h3 class=&quot;icon fa-mobile&quot;&gt;&lt;span class=&quot;label&quot;&gt;Phone&lt;/span&gt;&lt;/h3&gt;
+						000-000-0000
+					&lt;/li&gt;
+					&lt;li&gt;
+						&lt;h3 class=&quot;icon fa-envelope-o&quot;&gt;&lt;span class=&quot;label&quot;&gt;Email&lt;/span&gt;&lt;/h3&gt;
+						&lt;a href=&quot;#&quot;&gt;hello@untitled.tld&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+
+&lt;!-- Four --&gt;
+
+	&lt;section id=&quot;four&quot;&gt;
+		&lt;h2&gt;Elements&lt;/h2&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Text&lt;/h4&gt;
+			&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; and this is &lt;strong&gt;strong&lt;/strong&gt;. This is &lt;i&gt;italic&lt;/i&gt; and this is &lt;em&gt;emphasized&lt;/em&gt;.
+			This is &lt;sup&gt;superscript&lt;/sup&gt; text and this is &lt;sub&gt;subscript&lt;/sub&gt; text.
+			This is &lt;u&gt;underlined&lt;/u&gt; and this is code: &lt;code&gt;for (;;) { ... }&lt;/code&gt;. Finally, &lt;a href=&quot;#&quot;&gt;this is a link&lt;/a&gt;.&lt;/p&gt;
+			&lt;hr /&gt;
+			&lt;header&gt;
+				&lt;h4&gt;Heading with a Subtitle&lt;/h4&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nullam id egestas urna aliquam&lt;/p&gt;
+			&lt;/header&gt;
+			&lt;p&gt;Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.&lt;/p&gt;
+			&lt;header&gt;
+				&lt;h5&gt;Heading with a Subtitle&lt;/h5&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet nullam id egestas urna aliquam&lt;/p&gt;
+			&lt;/header&gt;
+			&lt;p&gt;Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.&lt;/p&gt;
+			&lt;hr /&gt;
+			&lt;h2&gt;Heading Level 2&lt;/h2&gt;
+			&lt;h3&gt;Heading Level 3&lt;/h3&gt;
+			&lt;h4&gt;Heading Level 4&lt;/h4&gt;
+			&lt;h5&gt;Heading Level 5&lt;/h5&gt;
+			&lt;h6&gt;Heading Level 6&lt;/h6&gt;
+			&lt;hr /&gt;
+			&lt;h5&gt;Blockquote&lt;/h5&gt;
+			&lt;blockquote&gt;Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.&lt;/blockquote&gt;
+			&lt;h5&gt;Preformatted&lt;/h5&gt;
+			&lt;pre&gt;&lt;code&gt;i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';&lt;/code&gt;&lt;/pre&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Lists&lt;/h4&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;6u 12u$(xsmall)&quot;&gt;
+					&lt;h5&gt;Unordered&lt;/h5&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Dolor pulvinar etiam magna etiam.&lt;/li&gt;
+						&lt;li&gt;Sagittis adipiscing lorem eleifend.&lt;/li&gt;
+						&lt;li&gt;Felis enim feugiat dolore viverra.&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;h5&gt;Alternate&lt;/h5&gt;
+					&lt;ul class=&quot;alt&quot;&gt;
+						&lt;li&gt;Dolor pulvinar etiam magna etiam.&lt;/li&gt;
+						&lt;li&gt;Sagittis adipiscing lorem eleifend.&lt;/li&gt;
+						&lt;li&gt;Felis enim feugiat dolore viverra.&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;6u$ 12u$(xsmall)&quot;&gt;
+					&lt;h5&gt;Ordered&lt;/h5&gt;
+					&lt;ol&gt;
+						&lt;li&gt;Dolor pulvinar etiam magna etiam.&lt;/li&gt;
+						&lt;li&gt;Etiam vel felis at lorem sed viverra.&lt;/li&gt;
+						&lt;li&gt;Felis enim feugiat dolore viverra.&lt;/li&gt;
+						&lt;li&gt;Dolor pulvinar etiam magna etiam.&lt;/li&gt;
+						&lt;li&gt;Etiam vel felis at lorem sed viverra.&lt;/li&gt;
+						&lt;li&gt;Felis enim feugiat dolore viverra.&lt;/li&gt;
+					&lt;/ol&gt;
+					&lt;h5&gt;Icons&lt;/h5&gt;
+					&lt;ul class=&quot;icons&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-twitter&quot;&gt;&lt;span class=&quot;label&quot;&gt;Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-facebook&quot;&gt;&lt;span class=&quot;label&quot;&gt;Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-instagram&quot;&gt;&lt;span class=&quot;label&quot;&gt;Instagram&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-github&quot;&gt;&lt;span class=&quot;label&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-dribbble&quot;&gt;&lt;span class=&quot;label&quot;&gt;Dribbble&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon fa-tumblr&quot;&gt;&lt;span class=&quot;label&quot;&gt;Tumblr&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;h5&gt;Actions&lt;/h5&gt;
+			&lt;ul class=&quot;actions&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions small&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special small&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button small&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;6u 12u$(small)&quot;&gt;
+					&lt;ul class=&quot;actions vertical&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;6u$ 12u$(small)&quot;&gt;
+					&lt;ul class=&quot;actions vertical small&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special small&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button small&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;6u 12u$(small)&quot;&gt;
+					&lt;ul class=&quot;actions vertical&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special fit&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button fit&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;6u$ 12u$(small)&quot;&gt;
+					&lt;ul class=&quot;actions vertical small&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special small fit&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button small fit&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Table&lt;/h4&gt;
+			&lt;h5&gt;Default&lt;/h5&gt;
+			&lt;div class=&quot;table-wrapper&quot;&gt;
+				&lt;table&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th&gt;Name&lt;/th&gt;
+							&lt;th&gt;Description&lt;/th&gt;
+							&lt;th&gt;Price&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item One&lt;/td&gt;
+							&lt;td&gt;Ante turpis integer aliquet porttitor.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Two&lt;/td&gt;
+							&lt;td&gt;Vis ac commodo adipiscing arcu aliquet.&lt;/td&gt;
+							&lt;td&gt;19.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Three&lt;/td&gt;
+							&lt;td&gt; Morbi faucibus arcu accumsan lorem.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Four&lt;/td&gt;
+							&lt;td&gt;Vitae integer tempus condimentum.&lt;/td&gt;
+							&lt;td&gt;19.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Five&lt;/td&gt;
+							&lt;td&gt;Ante turpis integer aliquet porttitor.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+					&lt;tfoot&gt;
+						&lt;tr&gt;
+							&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;
+							&lt;td&gt;100.00&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tfoot&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+
+			&lt;h5&gt;Alternate&lt;/h5&gt;
+			&lt;div class=&quot;table-wrapper&quot;&gt;
+				&lt;table class=&quot;alt&quot;&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th&gt;Name&lt;/th&gt;
+							&lt;th&gt;Description&lt;/th&gt;
+							&lt;th&gt;Price&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item One&lt;/td&gt;
+							&lt;td&gt;Ante turpis integer aliquet porttitor.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Two&lt;/td&gt;
+							&lt;td&gt;Vis ac commodo adipiscing arcu aliquet.&lt;/td&gt;
+							&lt;td&gt;19.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Three&lt;/td&gt;
+							&lt;td&gt; Morbi faucibus arcu accumsan lorem.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Four&lt;/td&gt;
+							&lt;td&gt;Vitae integer tempus condimentum.&lt;/td&gt;
+							&lt;td&gt;19.99&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Item Five&lt;/td&gt;
+							&lt;td&gt;Ante turpis integer aliquet porttitor.&lt;/td&gt;
+							&lt;td&gt;29.99&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+					&lt;tfoot&gt;
+						&lt;tr&gt;
+							&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;
+							&lt;td&gt;100.00&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tfoot&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Buttons&lt;/h4&gt;
+			&lt;ul class=&quot;actions&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special&quot;&gt;Special&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button big&quot;&gt;Big&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Default&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button small&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions fit&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special fit&quot;&gt;Fit&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button fit&quot;&gt;Fit&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions fit small&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special fit small&quot;&gt;Fit + Small&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button fit small&quot;&gt;Fit + Small&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button special icon fa-download&quot;&gt;Icon&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button icon fa-download&quot;&gt;Icon&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class=&quot;actions&quot;&gt;
+				&lt;li&gt;&lt;span class=&quot;button special disabled&quot;&gt;Special&lt;/span&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;span class=&quot;button disabled&quot;&gt;Default&lt;/span&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Form&lt;/h4&gt;
+			&lt;form method=&quot;post&quot; action=&quot;#&quot;&gt;
+				&lt;div class=&quot;row uniform 50%&quot;&gt;
+					&lt;div class=&quot;6u 12u$(xsmall)&quot;&gt;
+						&lt;input type=&quot;text&quot; name=&quot;demo-name&quot; id=&quot;demo-name&quot; value=&quot;&quot; placeholder=&quot;Name&quot; /&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;6u$ 12u$(xsmall)&quot;&gt;
+						&lt;input type=&quot;email&quot; name=&quot;demo-email&quot; id=&quot;demo-email&quot; value=&quot;&quot; placeholder=&quot;Email&quot; /&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;12u$&quot;&gt;
+						&lt;div class=&quot;select-wrapper&quot;&gt;
+							&lt;select name=&quot;demo-category&quot; id=&quot;demo-category&quot;&gt;
+								&lt;option value=&quot;&quot;&gt;- Category -&lt;/option&gt;
+								&lt;option value=&quot;1&quot;&gt;Manufacturing&lt;/option&gt;
+								&lt;option value=&quot;1&quot;&gt;Shipping&lt;/option&gt;
+								&lt;option value=&quot;1&quot;&gt;Administration&lt;/option&gt;
+								&lt;option value=&quot;1&quot;&gt;Human Resources&lt;/option&gt;
+							&lt;/select&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;4u 12u$(small)&quot;&gt;
+						&lt;input type=&quot;radio&quot; id=&quot;demo-priority-low&quot; name=&quot;demo-priority&quot; checked&gt;
+						&lt;label for=&quot;demo-priority-low&quot;&gt;Low Priority&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;4u 12u$(small)&quot;&gt;
+						&lt;input type=&quot;radio&quot; id=&quot;demo-priority-normal&quot; name=&quot;demo-priority&quot;&gt;
+						&lt;label for=&quot;demo-priority-normal&quot;&gt;Normal Priority&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;4u$ 12u(small)&quot;&gt;
+						&lt;input type=&quot;radio&quot; id=&quot;demo-priority-high&quot; name=&quot;demo-priority&quot;&gt;
+						&lt;label for=&quot;demo-priority-high&quot;&gt;High Priority&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;6u 12u$(small)&quot;&gt;
+						&lt;input type=&quot;checkbox&quot; id=&quot;demo-copy&quot; name=&quot;demo-copy&quot;&gt;
+						&lt;label for=&quot;demo-copy&quot;&gt;Email me a copy of this message&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;6u$ 12u$(small)&quot;&gt;
+						&lt;input type=&quot;checkbox&quot; id=&quot;demo-human&quot; name=&quot;demo-human&quot; checked&gt;
+						&lt;label for=&quot;demo-human&quot;&gt;I am a human and not a robot&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;12u$&quot;&gt;
+						&lt;textarea name=&quot;demo-message&quot; id=&quot;demo-message&quot; placeholder=&quot;Enter your message&quot; rows=&quot;6&quot;&gt;&lt;/textarea&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;12u$&quot;&gt;
+						&lt;ul class=&quot;actions&quot;&gt;
+							&lt;li&gt;&lt;input type=&quot;submit&quot; value=&quot;Send Message&quot; class=&quot;special&quot; /&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h4&gt;Image&lt;/h4&gt;
+			&lt;h5&gt;Fit&lt;/h5&gt;
+			&lt;div class=&quot;box alt&quot;&gt;
+				&lt;div class=&quot;row 50% uniform&quot;&gt;
+					&lt;div class=&quot;12u$&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/fulls/05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u$&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/04.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u$&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/06.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div class=&quot;4u$&quot;&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/thumbs/01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;h5&gt;Left &amp;amp; Right&lt;/h5&gt;
+			&lt;p&gt;&lt;span class=&quot;image left&quot;&gt;&lt;img src=&quot;/images/avatar.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.&lt;/p&gt;
+			&lt;p&gt;&lt;span class=&quot;image right&quot;&gt;&lt;img src=&quot;/images/avatar.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.&lt;/p&gt;
+		&lt;/section&gt;
+
+	&lt;/section&gt;</content><author><name></name></author><summary type="html">This post demostrates the various styles that are available for use from the Strata template</summary></entry><entry><title type="html">Lorem Ipsum</title><link href="http://localhost:4000/testing/2016/02/07/Lorem.html" rel="alternate" type="text/html" title="Lorem Ipsum" /><published>2016-02-07T00:00:00+05:30</published><updated>2016-02-07T00:00:00+05:30</updated><id>http://localhost:4000/testing/2016/02/07/Lorem</id><content type="html" xml:base="http://localhost:4000/testing/2016/02/07/Lorem.html">&lt;h3 id=&quot;lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-morbi-cursus-fringilla-dui-donec-laoreet-maximus-elit-mauris-ullamcorper-condimentum-lobortis-donec-maximus-mi-vitae-iaculis-placerat-ligula-mi-maximus-lectus-ac-varius-mi-nulla-id-neque-quisque-porta-eros-nisi-eu-fringilla-urna-dictum-vitae&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus fringilla dui. Donec laoreet maximus elit. Mauris ullamcorper condimentum lobortis. Donec maximus, mi vitae iaculis placerat, ligula mi maximus lectus, ac varius mi nulla id neque. Quisque porta eros nisi, eu fringilla urna dictum vitae.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/preview.jpg&quot; class=&quot;fit image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vestibulum id metus eu nisl sodales consectetur. Phasellus et ultrices lacus.&lt;/p&gt;
+
+&lt;p&gt;Curabitur orci turpis, egestas placerat velit eget, dictum pellentesque ipsum. Suspendisse potenti. Suspendisse ac maximus arcu. Sed ut mattis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eleifend odio vitae varius aliquam. Quisque ac pretium nisi. Curabitur tempus urna ac ultrices commodo.&lt;/p&gt;
+
+&lt;p&gt;Curabitur iaculis est at mattis mattis. Aliquam erat volutpat. Etiam vitae cursus quam. Nunc ultricies nunc non lorem fringilla cursus. Etiam dapibus libero ac turpis accumsan pulvinar. Sed auctor velit eget mi consequat bibendum. Aliquam interdum purus eget metus pretium ullamcorper.&lt;/p&gt;
+
+&lt;p&gt;Pellentesque feugiat ex non ligula commodo, eget varius tortor pellentesque. Pellentesque id tortor felis. Cras fringilla ante eget orci laoreet, non consequat urna suscipit. Pellentesque luctus ac nulla vitae porttitor. Proin sed tortor quis magna efficitur efficitur a id leo. Donec efficitur augue et laoreet maximus. Ut semper egestas porttitor. Phasellus sagittis vulputate sem at laoreet.&lt;/p&gt;
+
+&lt;p&gt;Sed lobortis urna ut mi volutpat, sit amet euismod sapien tincidunt. Nulla facilisi. Pellentesque quis tempus neque. Mauris dictum ac sapien nec congue. In hac habitasse platea dictumst. Duis id pellentesque nisl. Morbi eget massa magna.&lt;/p&gt;</content><author><name></name></author><category term="testing" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus fringilla dui. Donec laoreet maximus elit. Mauris ullamcorper condimentum lobortis. Donec maximus, mi vitae iaculis placerat, ligula mi maximus lectus, ac varius mi nulla id neque. Quisque porta eros nisi, eu fringilla urna dictum vitae.</summary></entry><entry><title type="html">This post demonstrates post content styles</title><link href="http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles.html" rel="alternate" type="text/html" title="This post demonstrates post content styles" /><published>2014-02-12T00:00:00+05:30</published><updated>2014-02-12T00:00:00+05:30</updated><id>http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles</id><content type="html" xml:base="http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-great-heading-h2&quot;&gt;Some great heading (h2)&lt;/h2&gt;
+
+&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.&lt;/p&gt;
+
+&lt;p&gt;Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;h2 id=&quot;another-great-heading-h2&quot;&gt;Another great heading (h2)&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.&lt;/p&gt;
+
+&lt;p&gt;Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3-1&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This quote will change your life. It will reveal the secrets of the universe, and all the wonders of humanity. Don’t misuse it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-great-subheading-h3-2&quot;&gt;Some great subheading (h3)&lt;/h3&gt;
+
+&lt;p&gt;Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Hello, World!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h4 id=&quot;you-might-want-a-sub-subheading-h4&quot;&gt;You might want a sub-subheading (h4)&lt;/h4&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h4 id=&quot;but-its-probably-overkill-h4&quot;&gt;But it’s probably overkill (h4)&lt;/h4&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;h3 id=&quot;oh-hai-an-unordered-list&quot;&gt;Oh hai, an unordered list!!&lt;/h3&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First item, yo&lt;/li&gt;
+  &lt;li&gt;Second item, dawg&lt;/li&gt;
+  &lt;li&gt;Third item, what what?!&lt;/li&gt;
+  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;oh-hai-an-ordered-list&quot;&gt;Oh hai, an ordered list!!&lt;/h3&gt;
+
+&lt;p&gt;In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First item, yo&lt;/li&gt;
+  &lt;li&gt;Second item, dawg&lt;/li&gt;
+  &lt;li&gt;Third item, what what?!&lt;/li&gt;
+  &lt;li&gt;Fourth item, fo sheezy my neezy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;headings-are-cool-h2&quot;&gt;Headings are cool! (h2)&lt;/h2&gt;
+
+&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;p&gt;Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.&lt;/p&gt;
+
+&lt;p&gt;Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.&lt;/p&gt;</content><author><name></name></author><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</summary></entry><entry><title type="html">This one weird trick will change your life</title><link href="http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life.html" rel="alternate" type="text/html" title="This one weird trick will change your life" /><published>2014-02-10T00:00:00+05:30</published><updated>2014-02-10T00:00:00+05:30</updated><id>http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life</id><content type="html" xml:base="http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life.html">&lt;p&gt;Lorem ipsum&lt;/p&gt;</content><author><name></name></author><summary type="html">Lorem ipsum</summary></entry><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/design/2012/02/10/code-snippets.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2012-02-10T00:00:00+05:30</published><updated>2012-02-10T00:00:00+05:30</updated><id>http://localhost:4000/design/2012/02/10/code-snippets</id><content type="html" xml:base="http://localhost:4000/design/2012/02/10/code-snippets.html">&lt;p&gt;Whenever you need to post a code snippet, use the liquid tags &lt;code class=&quot;highlighter-rouge&quot;&gt;highlight&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;endhighlight&lt;/code&gt; like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# some code goes here&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Quick overview on how to post code snippets using Liquid tags and how to escape or not escape markdown and HTML in your blog entries.</summary></entry><entry><title type="html">Hello World!</title><link href="http://localhost:4000/meta/2012/01/18/hello-world.html" rel="alternate" type="text/html" title="Hello World!" /><published>2012-01-18T00:00:00+05:30</published><updated>2012-01-18T00:00:00+05:30</updated><id>http://localhost:4000/meta/2012/01/18/hello-world</id><content type="html" xml:base="http://localhost:4000/meta/2012/01/18/hello-world.html">&lt;p&gt;Hello World!&lt;/p&gt;
+
+&lt;p&gt;This is just a sample post.&lt;/p&gt;
+
+&lt;p&gt;Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit. Praesent blandit, mi id facilisis adipiscing, tortor tellus mollis quam, sed dignissim sapien diam ac lectus. Nunc eget ornare quam. Vivamus sit amet tortor dolor, non egestas ligula. Mauris nisi risus, semper nec blandit id, suscipit eget dolor. Sed placerat odio at erat porttitor varius. Phasellus ornare vestibulum dolor ac rhoncus. Mauris laoreet varius est eu rhoncus. Curabitur facilisis mauris eu purus pharetra vitae tincidunt nulla gravida. Duis sagittis, felis a luctus mattis, metus sem tempus velit, sit amet blandit tellus nisi id augue.&lt;/p&gt;
+
+&lt;p&gt;Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin ultricies, enim sit amet bibendum tristique, ligula ante feugiat nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello World! Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit.</summary></entry></feed>
