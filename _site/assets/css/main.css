@@ -2018,7 +2018,7 @@ input[type="button"],
   position: fixed;
   text-align: right;
   top: 0;
-  width: 35%; }
+  width: 25%; }
   #header strong, #header b {
     color: #ffffff; }
   #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2030,7 +2030,8 @@ input[type="button"],
     margin: 0; }
   #header .image.avatar {
     margin: 0 0 1em 0;
-    width: 6.25em; }
+    width: 6.25em;
+    transform: rotate(35deg); }
 
 /* Footer */
 #footer {
@@ -2039,7 +2040,7 @@ input[type="button"],
   padding: 0 4em 6em 0;
   position: fixed;
   text-align: right;
-  width: 35%; }
+  width: 25%; }
   #footer .icons {
     margin: 1em 0 0 0; }
     #footer .icons a {
@@ -2065,10 +2066,10 @@ input[type="button"],
 
 /* Main */
 #main {
-  margin-left: 35%;
+  margin-left: 25%;
   max-width: 54em;
   padding: 8em 4em 4em 4em;
-  width: calc(100% - 35%); }
+  width: calc(100% - 25%); }
   #main > section {
     border-top: solid 2px #efefef;
     margin: 4em 0 0 0;

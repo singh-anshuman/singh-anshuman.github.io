@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   
   <channel>
-    <title>Strata by HTML5 UP</title>
-    <description>I am Strata, a super simple responsive site template freebie crafted by HTML5 UP.
+    <title>Anshuman Singh's Blog</title>
+    <description>Hi, I am Anshuman Singh, a Full Stack Developer
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Feb 2019 01:04:07 +0530</pubDate>
-    <lastBuildDate>Tue, 26 Feb 2019 01:04:07 +0530</lastBuildDate>
+    <pubDate>Tue, 26 Feb 2019 01:21:30 +0530</pubDate>
+    <lastBuildDate>Tue, 26 Feb 2019 01:21:30 +0530</lastBuildDate>
     
     <item>
       <title>Welcome to Jekyll!</title>
@@ -29,7 +29,7 @@
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll.html">Welcome to Jekyll!</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll.html">Welcome to Jekyll!</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Tue, 09 Feb 2016 22:45:11 +0530</pubDate>
       <link>http://localhost:4000/jekyll/2016/02/09/welcome-to-jekyll.html</link>
@@ -452,7 +452,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/styles/2016/02/08/styles.html">Styles from Strata</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/styles/2016/02/08/styles.html">Styles from Strata</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/styles/2016/02/08/styles.html</link>
@@ -480,7 +480,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/testing/2016/02/07/Lorem.html">Lorem Ipsum</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/testing/2016/02/07/Lorem.html">Lorem Ipsum</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Sun, 07 Feb 2016 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/testing/2016/02/07/Lorem.html</link>
@@ -577,7 +577,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles.html">This post demonstrates post content styles</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles.html">This post demonstrates post content styles</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Wed, 12 Feb 2014 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/styles/2014/02/12/this-post-demonstrates-post-content-styles.html</link>
@@ -593,7 +593,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life.html">This one weird trick will change your life</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life.html">This one weird trick will change your life</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/sensationalism/2014/02/10/this-one-weird-trick-will-change-your-life.html</link>
@@ -613,7 +613,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/design/2012/02/10/code-snippets.html">Code Snippets</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/design/2012/02/10/code-snippets.html">Code Snippets</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Fri, 10 Feb 2012 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/design/2012/02/10/code-snippets.html</link>
@@ -635,7 +635,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
  
 <br />
 <hr />
-<p>You’ve just read <strong>"<a href="http://localhost:4000/meta/2012/01/18/hello-world.html">Hello World!</a>"</strong> on <strong>"<a href="http://localhost:4000/">Strata by HTML5 UP</a>"</strong>.</p>
+<p>You’ve just read <strong>"<a href="http://localhost:4000/meta/2012/01/18/hello-world.html">Hello World!</a>"</strong> on <strong>"<a href="http://localhost:4000/">Anshuman Singh's Blog</a>"</strong>.</p>
  ]]></description>
       <pubDate>Wed, 18 Jan 2012 00:00:00 +0530</pubDate>
       <link>http://localhost:4000/meta/2012/01/18/hello-world.html</link>

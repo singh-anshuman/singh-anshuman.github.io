@@ -41,7 +41,7 @@
 		)
 	));
 
-	$size-header-width: 35%;
+	$size-header-width: 25%;
 	$size-header-pad: 4em;
 
 /* Basic */
@@ -931,6 +931,7 @@
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
 			width: 6.25em;
+			transform: rotate(35deg);
 		}
 	}
 
