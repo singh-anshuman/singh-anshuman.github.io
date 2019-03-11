@@ -8,7 +8,7 @@
   <head>
     <title>Spring Cloud Config - File Based Repository - Anshuman Singh's Blog</title>
 <meta charset="utf-8" />
-<meta name="description" content="Spring Cloud Config Server implementation demonstrating file based config repository.
+<meta name="description" content="Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
 
 " />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,7 @@
     <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Spring Cloud Config - File Based Repository" />
-<meta property="og:description" content="Spring Cloud Config Server implementation demonstrating file based config repository.
+<meta property="og:description" content="Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
 
 " />
 <meta property="og:site_name" content="Anshuman Singh's Blog" />
@@ -53,16 +53,33 @@
             <i class="fa fa-calendar"></i> 09 March 2019 on <i class="fa fa-tags"></i> Spring-Cloud.
             
 
-  <i class="fa fa-clock-o"></i> 7 minutes
+  <i class="fa fa-clock-o"></i> 8 minutes
 
 
           </p>
         </header>
 
         <section>
-          <p>Spring Cloud Config Server implementation demonstrating file based config repository.</p>
+          <p>Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</p>
+
+<p>To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has Microservice based architecture with 2 different sub-applications deployed separately.</p>
+
+<ul>
+  <li>User</li>
+  <li>Order</li>
+</ul>
+
+<p>Let’s start by creating the Spring Cloud Config Server.</p>
 
 <h2>Narrator's Spring Cloud Config Server</h2>
+
+<p>Create a blank maven project in your IDE of choice. For this project I’ll be using Idea intelliJ IDE. Modify the pom.xml of the project and add following items.</p>
+
+<ol>
+  <li>Make this a Springboot Application by adding the parent tag. At the time of writing this blog post the latest stable version of Springboot is <em>2.1.3.RELEASE</em>.</li>
+  <li>Add the dependency management tag for getting the bill of material for config server.</li>
+  <li>Add dependency for Spring Cloud Config Starter and the Spring Cloud Config Server.</li>
+</ol>
 
 <h3>pom.xml</h3>
 

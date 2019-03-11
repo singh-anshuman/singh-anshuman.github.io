@@ -5,9 +5,22 @@ categories: Spring-Cloud
 image:  /images/bg.jpg
 ---
 
-Spring Cloud Config Server implementation demonstrating file based config repository.
+Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
 
-<h2>Narrator's Spring Cloud Config Server</h2>
+To demonstrate the Spring Cloud Config server setup and usage we'll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has Microservice based architecture with 2 different sub-applications deployed separately.
+
+* User
+* Order
+
+Let's start by creating the Spring Cloud Config Server.
+
+ <h2>Narrator's Spring Cloud Config Server</h2>
+
+ Create a blank maven project in your IDE of choice. For this project I'll be using Idea intelliJ IDE. Modify the pom.xml of the project and add following items.
+
+ 1. Make this a Springboot Application by adding the parent tag. At the time of writing this blog post the latest stable version of Springboot is _2.1.3.RELEASE_.
+ 2. Add the dependency management tag for getting the bill of material for config server.
+ 3. Add dependency for Spring Cloud Config Starter and the Spring Cloud Config Server.
 
 <h3>pom.xml</h3>
 
