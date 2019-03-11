@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-11T22:38:08+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-12T00:09:53+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
 </subtitle><entry><title type="html">Spring Cloud Config - File Based Repository</title><link href="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html" rel="alternate" type="text/html" title="Spring Cloud Config - File Based Repository" /><published>2019-03-09T00:00:00+05:30</published><updated>2019-03-09T00:00:00+05:30</updated><id>http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo</id><content type="html" xml:base="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html">&lt;p&gt;Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.&lt;/p&gt;
 
 &lt;p&gt;To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.&lt;/p&gt;
@@ -8,13 +8,17 @@
   &lt;li&gt;Order&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;-block-level-diagram-showing-the-3-components-to-be-added-here-&quot;&gt;&amp;lt; Block Level Diagram showing the 3 components to be added here. &amp;gt;&lt;/h1&gt;
+&lt;h1 id=&quot;-block-level-diagram-showing-3-components-to-be-added-here-&quot;&gt;&amp;lt; Block Level Diagram showing 3 components to be added here. &amp;gt;&lt;/h1&gt;
 
 &lt;p&gt;Let’s start by creating the Spring Cloud Config Server.&lt;/p&gt;
 
 &lt;h2&gt;Narrator's Spring Cloud Config Server&lt;/h2&gt;
 
-&lt;p&gt;Create a blank maven project in your IDE of choice. For this project I’ll be using Idea intelliJ IDE. Modify the pom.xml of the project and add following items.&lt;/p&gt;
+&lt;p&gt;Create a blank maven project in your IDE of choice. For this project I’ll be using Idea intelliJ IDE. Once the project is fully setup the folder structure is going to look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png&quot; alt=&quot;Config Server Folder Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lets start by modifying pom.xml of the project and add following items.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Make this a Springboot Application by adding the parent tag. At the time of writing this blog post the latest stable version of Springboot is &lt;em&gt;2.1.3.RELEASE&lt;/em&gt;.&lt;/li&gt;
@@ -118,9 +122,25 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;privacy.enabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;y&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Spring Cloud Config server setup is complete. Run the &lt;em&gt;NarratorConfigServerStarter&lt;/em&gt; class to start the config server. Config server for Narrator application is ready to accept requests from client applications.&lt;/p&gt;
+&lt;p&gt;Spring Cloud Config server setup is complete. Run the &lt;em&gt;NarratorConfigServerStarter&lt;/em&gt; class to start the config server.&lt;/p&gt;
+
+&lt;p&gt;To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman&lt;/p&gt;
+
+&lt;h1 id=&quot;-snapshot-of-postman-request-with-output-to-be-added-here-&quot;&gt;&amp;lt; Snapshot of postman request with output to be added here. &amp;gt;&lt;/h1&gt;
+
+&lt;p&gt;Config server for Narrator application is ready to accept requests from client applications.&lt;/p&gt;
+
+&lt;p&gt;Now lets create couple of client applications for the config server. These applications are going to send requests to the config Server for configurations.&lt;/p&gt;
 
 &lt;h2&gt;Spring Cloud Config Client - User&lt;/h2&gt;
+
+&lt;p&gt;We’ll create the user application which will act as a client for the config server. This is a REST based application with 2 layers - REST Controller layer and Service layer.&lt;/p&gt;
+
+&lt;p&gt;Once done the folder structure is going to look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png&quot; alt=&quot;User Client Folder Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a new maven application and modify the pom.xml to make this application a Springboot application. Next, add the dependencies for Spring Web Starter and Spring Cloud Config Client packages.&lt;/p&gt;
 
 &lt;h3&gt;pom.xml&lt;/h3&gt;
 
@@ -149,13 +169,17 @@
 
 &lt;h3&gt;UserManagementStarter.java&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;application&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;would&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserManagementStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UserManagementStarter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Add User pojo to the project. This class is going to carry the information for User entity.&lt;/p&gt;
 
 &lt;h3&gt;User.java&lt;/h3&gt;
 
@@ -170,6 +194,8 @@
 
     &lt;span class=&quot;c1&quot;&gt;//  Getters and Setters&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now lets add the REST controller to the application where we are going to define the REST mappings for User REST service.&lt;/p&gt;
 
 &lt;h3&gt;UserController.java&lt;/h3&gt;
 
@@ -195,11 +221,14 @@
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Now add &lt;em&gt;UserService.java&lt;/em&gt; class containing business logic for the user application. In this class we’re going to populate the value of &lt;em&gt;privacyEnabled&lt;/em&gt; field from configuration passed by config server.&lt;/p&gt;
+
 &lt;h3&gt;UserService.java&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
+    &lt;span class=&quot;c1&quot;&gt;//  Getting the value for this field from the configuration sent by config server  &lt;/span&gt;
     &lt;span class=&quot;nd&quot;&gt;@Value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${privacy.enabled}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;privacyEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -243,9 +272,15 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Add the property file containing information about the port on which the user application server is listen for requests.&lt;/p&gt;
+
 &lt;h3&gt;application.properties&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;server.port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8182&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now comes the step where you’ll specify the details of config server. Add a file &lt;em&gt;bootstrap.properties&lt;/em&gt; which will contain URI of config server and name of the application. This name will be used by the config server to identify the configuration set for the application. Also, in this file you specify the environment for which the configuration is to be fetched from the config server.&lt;/p&gt;
+
+&lt;p&gt;Configuration present in the &lt;em&gt;bootstrap.properties&lt;/em&gt; file is loaded before any other configuration.&lt;/p&gt;
 
 &lt;h3&gt;bootstrap.properties&lt;/h3&gt;
 
@@ -253,7 +288,13 @@
 &lt;span class=&quot;py&quot;&gt;spring.application.name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;user&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Similar to the User service we’re going to create order application which is going to ask for configuration from the config server.&lt;/p&gt;
+
 &lt;h2&gt;Spring Cloud Config Server - Order&lt;/h2&gt;
+
+&lt;p&gt;Once done the folder structure is going to look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;pom.xml&lt;/h3&gt;
 
@@ -330,6 +371,7 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
+    &lt;span class=&quot;c1&quot;&gt;// Getting the value of this field from configuration sent by config server&lt;/span&gt;
     &lt;span class=&quot;nd&quot;&gt;@Value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${country}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -380,4 +422,10 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;spring.profiles.active&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;qa&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;spring.application.name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;order&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/bg.jpg" /></entry></feed>
+&lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that both the clients are setup run the starter classes for both the applications. When the applications start you’ll notice a log entry indicating the config server to which the request for configuration is sent by client applications.&lt;/p&gt;
+
+&lt;h1&gt;&lt;Readme to=&quot;&quot; be=&quot;&quot; modified=&quot;&quot; for=&quot;&quot; the=&quot;&quot; github=&quot;&quot; repo=&quot;&quot; that=&quot;&quot; has=&quot;&quot; code=&quot;&quot; base=&quot;&quot; this=&quot;&quot; post.=&quot;&quot;&gt;&lt;/Readme&gt;&lt;/h1&gt;
+
+&lt;p&gt;Complete and working code for these applications can be downloaded from &lt;a href=&quot;https://github.com/singh-anshuman/narrator-config-file-repo&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/bg.jpg" /></entry></feed>

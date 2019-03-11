@@ -12,13 +12,17 @@ To demonstrate the Spring Cloud Config server setup and usage we'll be creating 
 * User
 * Order
 
-# < Block Level Diagram showing the 3 components to be added here. >
+# < Block Level Diagram showing 3 components to be added here. >
 
 Let's start by creating the Spring Cloud Config Server.
 
  <h2>Narrator's Spring Cloud Config Server</h2>
 
- Create a blank maven project in your IDE of choice. For this project I'll be using Idea intelliJ IDE. Modify the pom.xml of the project and add following items.
+ Create a blank maven project in your IDE of choice. For this project I'll be using Idea intelliJ IDE. Once the project is fully setup the folder structure is going to look like this.
+
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png" alt="Config Server Folder Structure"/>
+
+Lets start by modifying pom.xml of the project and add following items.
 
  1. Make this a Springboot Application by adding the parent tag. At the time of writing this blog post the latest stable version of Springboot is _2.1.3.RELEASE_.
  2. Add the dependency management tag for getting the bill of material for config server.
@@ -140,9 +144,25 @@ privacy.enabled=n
 privacy.enabled=y
 {% endhighlight %}
 
-Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStarter_ class to start the config server. Config server for Narrator application is ready to accept requests from client applications.
+Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStarter_ class to start the config server.
+
+To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman
+
+# < Snapshot of postman request with output to be added here. >
+
+Config server for Narrator application is ready to accept requests from client applications.
+
+Now lets create couple of client applications for the config server. These applications are going to send requests to the config Server for configurations.
 
 <h2>Spring Cloud Config Client - User</h2>
+
+We'll create the user application which will act as a client for the config server. This is a REST based application with 2 layers - REST Controller layer and Service layer.
+
+Once done the folder structure is going to look like this.
+
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png" alt="User Client Folder Structure"/>
+
+Create a new maven application and modify the pom.xml to make this application a Springboot application. Next, add the dependencies for Spring Web Starter and Spring Cloud Config Client packages.
 
 <h3>pom.xml</h3>
 
@@ -175,6 +195,8 @@ Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStart
 
 {% highlight java %}
 
+Add a starter class for the application with the _public static void main(String []args)_ method which would be run to start the application.
+
 @SpringBootApplication
 public class UserManagementStarter {
 
@@ -184,6 +206,8 @@ public class UserManagementStarter {
 }
 
 {% endhighlight %}
+
+Add User pojo to the project. This class is going to carry the information for User entity.
 
 <h3>User.java</h3>
 
@@ -202,6 +226,8 @@ public class User {
 }
 
 {% endhighlight %}
+
+Now lets add the REST controller to the application where we are going to define the REST mappings for User REST service.
 
 <h3>UserController.java</h3>
 
@@ -230,6 +256,8 @@ public class UserController {
 
 {% endhighlight %}
 
+Now add _UserService.java_ class containing business logic for the user application. In this class we're going to populate the value of _privacyEnabled_ field from configuration passed by config server.
+
 <h3>UserService.java</h3>
 
 {% highlight java %}
@@ -237,6 +265,7 @@ public class UserController {
 @Service
 public class UserService {
 
+    //  Getting the value for this field from the configuration sent by config server  
     @Value("${privacy.enabled}")
     private String privacyEnabled;
 
@@ -282,6 +311,8 @@ public class UserService {
 
 {% endhighlight %}
 
+Add the property file containing information about the port on which the user application server is listen for requests.
+
 <h3>application.properties</h3>
 
 {% highlight properties %}
@@ -289,6 +320,10 @@ public class UserService {
 server.port=8182
 
 {% endhighlight %}
+
+Now comes the step where you'll specify the details of config server. Add a file _bootstrap.properties_ which will contain URI of config server and name of the application. This name will be used by the config server to identify the configuration set for the application. Also, in this file you specify the environment for which the configuration is to be fetched from the config server.
+
+Configuration present in the _bootstrap.properties_ file is loaded before any other configuration.
 
 <h3>bootstrap.properties</h3>
 
@@ -300,7 +335,13 @@ spring.cloud.config.uri=http://localhost:8181
 
 {% endhighlight %}
 
+Similar to the User service we're going to create order application which is going to ask for configuration from the config server.
+
 <h2>Spring Cloud Config Server - Order</h2>
+
+Once done the folder structure is going to look like this.
+
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png" alt="Order Client Folder Structure"/>
 
 <h3>pom.xml</h3>
 
@@ -395,6 +436,7 @@ public class OrderController {
 @Service
 public class OrderService {
 
+    // Getting the value of this field from configuration sent by config server
     @Value("${country}")
     private String country;
 
@@ -456,3 +498,9 @@ spring.application.name=order
 spring.cloud.config.uri=http://localhost:8181
 
 {% endhighlight %}
+
+Now that both the clients are setup run the starter classes for both the applications. When the applications start you'll notice a log entry indicating the config server to which the request for configuration is sent by client applications.
+
+# <Readme to be modified for the github repo that has the code base for this post.>
+
+Complete and working code for these applications can be downloaded from <a href="https://github.com/singh-anshuman/narrator-config-file-repo" target="blank">github</a>.
