@@ -12,7 +12,7 @@ To demonstrate the Spring Cloud Config server setup and usage we'll be creating 
 * User
 * Order
 
-# < Block Level Diagram showing 3 components to be added here. >
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png" alt="Architecture Block Diagram"/>
 
 Let's start by creating the Spring Cloud Config Server.
 
@@ -108,7 +108,7 @@ spring.cloud.config.server.native.search-locations=file:///Users/anshumansingh/A
 
 The next step now is to add the configuration repositories from which the spring cloud is going to serve configurations to the client applications.
 
-Start by adding directories named _order_ and _user_ in the local system. Next add the files mentioned below containing properties in order and user directories. For this post we're going to have _country_ property for order application and _privacy.enabled_ property for user application.   
+Start by adding directories named _order_ and _user_ in the local system. Next add the files mentioned below containing properties in order and user directories. For this post we're going to have _country_ property for order application and _privacy.enabled_ property for user application.
 
 <h3>order.properties</h3>
 
@@ -146,9 +146,15 @@ privacy.enabled=y
 
 Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStarter_ class to start the config server.
 
-To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman
+To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman.
 
-# < Snapshot of postman request with output to be added here. >
+<h2>Http Response for User Configuration for the <i>default</i> profile</h2>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png" alt="Order Client Folder Structure"/>
+
+<h2>Http Response for User Configuration for the <i>qa</i> profile</h2>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png" alt="Order Client Folder Structure"/>
+
+Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.  
 
 Config server for Narrator application is ready to accept requests from client applications.
 
@@ -500,7 +506,5 @@ spring.cloud.config.uri=http://localhost:8181
 {% endhighlight %}
 
 Now that both the clients are setup run the starter classes for both the applications. When the applications start you'll notice a log entry indicating the config server to which the request for configuration is sent by client applications.
-
-# <Readme to be modified for the github repo that has the code base for this post.>
 
 Complete and working code for these applications can be downloaded from <a href="https://github.com/singh-anshuman/narrator-config-file-repo" target="blank">github</a>.

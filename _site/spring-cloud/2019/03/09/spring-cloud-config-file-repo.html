@@ -69,7 +69,7 @@
   <li>Order</li>
 </ul>
 
-<h1 id="-block-level-diagram-showing-3-components-to-be-added-here-">&lt; Block Level Diagram showing 3 components to be added here. &gt;</h1>
+<p><img src="/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png" alt="Architecture Block Diagram" /></p>
 
 <p>Let’s start by creating the Spring Cloud Config Server.</p>
 
@@ -185,9 +185,15 @@
 
 <p>Spring Cloud Config server setup is complete. Run the <em>NarratorConfigServerStarter</em> class to start the config server.</p>
 
-<p>To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman</p>
+<p>To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman.</p>
 
-<h1 id="-snapshot-of-postman-request-with-output-to-be-added-here-">&lt; Snapshot of postman request with output to be added here. &gt;</h1>
+<h2>Http Response for User Configuration for the <i>default</i> profile</h2>
+<p><img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png" alt="Order Client Folder Structure" /></p>
+
+<h2>Http Response for User Configuration for the <i>qa</i> profile</h2>
+<p><img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png" alt="Order Client Folder Structure" /></p>
+
+<p>Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.</p>
 
 <p>Config server for Narrator application is ready to accept requests from client applications.</p>
 
@@ -486,8 +492,6 @@
 <span class="py">spring.cloud.config.uri</span><span class="p">=</span><span class="s">http://localhost:8181</span></code></pre></figure>
 
 <p>Now that both the clients are setup run the starter classes for both the applications. When the applications start you’ll notice a log entry indicating the config server to which the request for configuration is sent by client applications.</p>
-
-<h1><Readme to="" be="" modified="" for="" the="" github="" repo="" that="" has="" code="" base="" this="" post.=""></Readme></h1>
 
 <p>Complete and working code for these applications can be downloaded from <a href="https://github.com/singh-anshuman/narrator-config-file-repo" target="blank">github</a>.</p>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-12T00:09:53+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-12T00:39:46+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
 </subtitle><entry><title type="html">Spring Cloud Config - File Based Repository</title><link href="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html" rel="alternate" type="text/html" title="Spring Cloud Config - File Based Repository" /><published>2019-03-09T00:00:00+05:30</published><updated>2019-03-09T00:00:00+05:30</updated><id>http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo</id><content type="html" xml:base="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html">&lt;p&gt;Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.&lt;/p&gt;
 
 &lt;p&gt;To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.&lt;/p&gt;
@@ -8,7 +8,7 @@
   &lt;li&gt;Order&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;-block-level-diagram-showing-3-components-to-be-added-here-&quot;&gt;&amp;lt; Block Level Diagram showing 3 components to be added here. &amp;gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png&quot; alt=&quot;Architecture Block Diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s start by creating the Spring Cloud Config Server.&lt;/p&gt;
 
@@ -124,9 +124,15 @@
 
 &lt;p&gt;Spring Cloud Config server setup is complete. Run the &lt;em&gt;NarratorConfigServerStarter&lt;/em&gt; class to start the config server.&lt;/p&gt;
 
-&lt;p&gt;To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman&lt;/p&gt;
+&lt;p&gt;To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman.&lt;/p&gt;
 
-&lt;h1 id=&quot;-snapshot-of-postman-request-with-output-to-be-added-here-&quot;&gt;&amp;lt; Snapshot of postman request with output to be added here. &amp;gt;&lt;/h1&gt;
+&lt;h2&gt;Http Response for User Configuration for the &lt;i&gt;default&lt;/i&gt; profile&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Http Response for User Configuration for the &lt;i&gt;qa&lt;/i&gt; profile&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.&lt;/p&gt;
 
 &lt;p&gt;Config server for Narrator application is ready to accept requests from client applications.&lt;/p&gt;
 
@@ -425,7 +431,5 @@
 &lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now that both the clients are setup run the starter classes for both the applications. When the applications start you’ll notice a log entry indicating the config server to which the request for configuration is sent by client applications.&lt;/p&gt;
-
-&lt;h1&gt;&lt;Readme to=&quot;&quot; be=&quot;&quot; modified=&quot;&quot; for=&quot;&quot; the=&quot;&quot; github=&quot;&quot; repo=&quot;&quot; that=&quot;&quot; has=&quot;&quot; code=&quot;&quot; base=&quot;&quot; this=&quot;&quot; post.=&quot;&quot;&gt;&lt;/Readme&gt;&lt;/h1&gt;
 
 &lt;p&gt;Complete and working code for these applications can be downloaded from &lt;a href=&quot;https://github.com/singh-anshuman/narrator-config-file-repo&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/bg.jpg" /></entry></feed>
