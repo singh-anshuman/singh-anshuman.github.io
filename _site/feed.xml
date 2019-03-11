@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-11T22:11:45+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
-</subtitle><entry><title type="html">Spring Cloud Config - File Based Repository</title><link href="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html" rel="alternate" type="text/html" title="Spring Cloud Config - File Based Repository" /><published>2019-03-09T00:00:00+05:30</published><updated>2019-03-09T00:00:00+05:30</updated><id>http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo</id><content type="html" xml:base="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html">&lt;p&gt;Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-11T22:38:08+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
+</subtitle><entry><title type="html">Spring Cloud Config - File Based Repository</title><link href="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html" rel="alternate" type="text/html" title="Spring Cloud Config - File Based Repository" /><published>2019-03-09T00:00:00+05:30</published><updated>2019-03-09T00:00:00+05:30</updated><id>http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo</id><content type="html" xml:base="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html">&lt;p&gt;Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.&lt;/p&gt;
 
-&lt;p&gt;To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has Microservice based architecture with 2 different sub-applications deployed separately.&lt;/p&gt;
+&lt;p&gt;To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;User&lt;/li&gt;
   &lt;li&gt;Order&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&quot;-block-level-diagram-showing-the-3-components-to-be-added-here-&quot;&gt;&amp;lt; Block Level Diagram showing the 3 components to be added here. &amp;gt;&lt;/h1&gt;
 
 &lt;p&gt;Let’s start by creating the Spring Cloud Config Server.&lt;/p&gt;
 
@@ -58,6 +60,10 @@
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;After adding all these dependencies in pom.xml maven is going to fetch all the required jars for you and add them to the application’s classpath. The next step now is to create the starter class which will be run to start the Spring Cloud Config server.&lt;/p&gt;
+
+&lt;p&gt;Lets call this class &lt;em&gt;NarratorConfigServerStarter.java&lt;/em&gt;. In this class specify that the application is a Springboot application by adding the annotation &lt;em&gt;@SpringBootApplication&lt;/em&gt;. To make this Springboot application a Spring Cloud Config Server add the annotation &lt;em&gt;@EnableConfigServer&lt;/em&gt;.&lt;/p&gt;
+
 &lt;h3&gt;NarratorConfigServerStarter.java&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
@@ -70,19 +76,35 @@
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Add a property file named &lt;em&gt;application.properties&lt;/em&gt; containing configurations for the config server. This property file will be considered by Springboot when the application is started. We are going to add 3 configurations to this property file.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Port on which the config server is going to listen for configuration requests.&lt;/li&gt;
+  &lt;li&gt;Profile which indicates the type of configuration repository that will be used by the config server. We’ll provide &lt;em&gt;native&lt;/em&gt; value to this configuration as we are going to use file based configuration repository for this post.&lt;/li&gt;
+  &lt;li&gt;Path of the directories where configuration files are stored for client applications.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h3&gt;application.properties&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;server.port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8181&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;spring.profiles.active&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;native&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;spring.cloud.config.server.native.search-locations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;file:///Users/anshumansingh/Anshuman's_Stuff/Interview_Preparation/GIT_Downloads/narrator-config-file-repo/narrator-spring-config-file-repo/config-repo/user,file:///Users/anshumansingh/Anshuman's_Stuff/Interview_Preparation/GIT_Downloads/narrator-config-file-repo/narrator-spring-config-file-repo/config-repo/order&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;The next step now is to add the configuration repositories from which the spring cloud is going to serve configurations to the client applications.&lt;/p&gt;
+
+&lt;p&gt;Start by adding directories named &lt;em&gt;order&lt;/em&gt; and &lt;em&gt;user&lt;/em&gt; in the local system. Next add the files mentioned below containing properties in order and user directories. For this post we’re going to have &lt;em&gt;country&lt;/em&gt; property for order application and &lt;em&gt;privacy.enabled&lt;/em&gt; property for user application.&lt;/p&gt;
+
 &lt;h3&gt;order.properties&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;IN&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Different property files for different environments can be added to the config repository. Here we are going to add another property file for order application for the &lt;em&gt;qa&lt;/em&gt; environment. Notice the naming convention of the property file.&lt;/p&gt;
+
 &lt;h3&gt;order-qa.properties&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;country&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;US&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Similarly add property files for user application for different environments for the user application.&lt;/p&gt;
 
 &lt;h3&gt;user.properties&lt;/h3&gt;
 
@@ -95,6 +117,8 @@
 &lt;h3&gt;user-uat.properties&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;privacy.enabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;y&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Spring Cloud Config server setup is complete. Run the &lt;em&gt;NarratorConfigServerStarter&lt;/em&gt; class to start the config server. Config server for Narrator application is ready to accept requests from client applications.&lt;/p&gt;
 
 &lt;h2&gt;Spring Cloud Config Client - User&lt;/h2&gt;
 
@@ -356,4 +380,4 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;&lt;span class=&quot;py&quot;&gt;spring.profiles.active&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;qa&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;spring.application.name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;order&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/bg.jpg" /></entry></feed>
+&lt;span class=&quot;py&quot;&gt;spring.cloud.config.uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://localhost:8181&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/bg.jpg" /></entry></feed>

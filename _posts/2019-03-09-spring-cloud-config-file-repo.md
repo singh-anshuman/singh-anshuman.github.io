@@ -5,12 +5,14 @@ categories: Spring-Cloud
 image:  /images/bg.jpg
 ---
 
-Handling configurations for various applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
+Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
 
-To demonstrate the Spring Cloud Config server setup and usage we'll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has Microservice based architecture with 2 different sub-applications deployed separately.
+To demonstrate the Spring Cloud Config server setup and usage we'll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.
 
 * User
 * Order
+
+# < Block Level Diagram showing the 3 components to be added here. >
 
 Let's start by creating the Spring Cloud Config Server.
 
@@ -64,6 +66,10 @@ Let's start by creating the Spring Cloud Config Server.
 
 {% endhighlight %}
 
+After adding all these dependencies in pom.xml maven is going to fetch all the required jars for you and add them to the application's classpath. The next step now is to create the starter class which will be run to start the Spring Cloud Config server.
+
+Lets call this class _NarratorConfigServerStarter.java_. In this class specify that the application is a Springboot application by adding the annotation _@SpringBootApplication_. To make this Springboot application a Spring Cloud Config Server add the annotation _@EnableConfigServer_.
+
 <h3>NarratorConfigServerStarter.java</h3>
 
 {% highlight java %}
@@ -80,6 +86,12 @@ public class NarratorConfigServerStarter {
 
 {% endhighlight %}
 
+Add a property file named _application.properties_ containing configurations for the config server. This property file will be considered by Springboot when the application is started. We are going to add 3 configurations to this property file.
+
+1. Port on which the config server is going to listen for configuration requests.
+2. Profile which indicates the type of configuration repository that will be used by the config server. We'll provide _native_ value to this configuration as we are going to use file based configuration repository for this post.
+3. Path of the directories where configuration files are stored for client applications.  
+
 <h3>application.properties</h3>
 
 {% highlight properties %}
@@ -90,17 +102,25 @@ spring.cloud.config.server.native.search-locations=file:///Users/anshumansingh/A
 
 {% endhighlight %}
 
+The next step now is to add the configuration repositories from which the spring cloud is going to serve configurations to the client applications.
+
+Start by adding directories named _order_ and _user_ in the local system. Next add the files mentioned below containing properties in order and user directories. For this post we're going to have _country_ property for order application and _privacy.enabled_ property for user application.   
+
 <h3>order.properties</h3>
 
 {% highlight properties %}
 country=IN
 {% endhighlight %}
 
+Different property files for different environments can be added to the config repository. Here we are going to add another property file for order application for the _qa_ environment. Notice the naming convention of the property file.
+
 <h3>order-qa.properties</h3>
 
 {% highlight properties %}
 country=US
 {% endhighlight %}
+
+Similarly add property files for user application for different environments for the user application.
 
 <h3>user.properties</h3>
 
@@ -119,6 +139,8 @@ privacy.enabled=n
 {% highlight properties %}
 privacy.enabled=y
 {% endhighlight %}
+
+Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStarter_ class to start the config server. Config server for Narrator application is ready to accept requests from client applications.
 
 <h2>Spring Cloud Config Client - User</h2>
 
