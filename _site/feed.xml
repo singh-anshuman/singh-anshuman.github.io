@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-12T00:39:46+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-13T01:18:52+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anshuman Singh’s Blog</title><subtitle>Hi, I am **Anshuman Singh**, a **Full Stack Developer**
 </subtitle><entry><title type="html">Spring Cloud Config - File Based Repository</title><link href="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html" rel="alternate" type="text/html" title="Spring Cloud Config - File Based Repository" /><published>2019-03-09T00:00:00+05:30</published><updated>2019-03-09T00:00:00+05:30</updated><id>http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo</id><content type="html" xml:base="http://localhost:4000/spring-cloud/2019/03/09/spring-cloud-config-file-repo.html">&lt;p&gt;Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.&lt;/p&gt;
 
 &lt;p&gt;To demonstrate the Spring Cloud Config server setup and usage we’ll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.&lt;/p&gt;
@@ -8,7 +8,7 @@
   &lt;li&gt;Order&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png&quot; alt=&quot;Architecture Block Diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png&quot; alt=&quot;Architecture Block Diagram&quot; class=&quot;fit image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s start by creating the Spring Cloud Config Server.&lt;/p&gt;
 
@@ -16,7 +16,7 @@
 
 &lt;p&gt;Create a blank maven project in your IDE of choice. For this project I’ll be using Idea intelliJ IDE. Once the project is fully setup the folder structure is going to look like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png&quot; alt=&quot;Config Server Folder Structure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png&quot; alt=&quot;Config Server Folder Structure&quot; class=&quot;fit image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lets start by modifying pom.xml of the project and add following items.&lt;/p&gt;
 
@@ -127,10 +127,10 @@
 &lt;p&gt;To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman.&lt;/p&gt;
 
 &lt;h2&gt;Http Response for User Configuration for the &lt;i&gt;default&lt;/i&gt; profile&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png&quot; class=&quot;fit image&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;Http Response for User Configuration for the &lt;i&gt;qa&lt;/i&gt; profile&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png&quot; class=&quot;fit image&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.&lt;/p&gt;
 
@@ -144,7 +144,7 @@
 
 &lt;p&gt;Once done the folder structure is going to look like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png&quot; alt=&quot;User Client Folder Structure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png&quot; alt=&quot;User Client Folder Structure&quot; class=&quot;fit image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Create a new maven application and modify the pom.xml to make this application a Springboot application. Next, add the dependencies for Spring Web Starter and Spring Cloud Config Client packages.&lt;/p&gt;
 
@@ -300,7 +300,7 @@
 
 &lt;p&gt;Once done the folder structure is going to look like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png&quot; alt=&quot;Order Client Folder Structure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png&quot; alt=&quot;Order Client Folder Structure&quot; class=&quot;fit image&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;pom.xml&lt;/h3&gt;
 

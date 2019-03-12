@@ -12,7 +12,7 @@ To demonstrate the Spring Cloud Config server setup and usage we'll be creating 
 * User
 * Order
 
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png" alt="Architecture Block Diagram"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/architecture_block_diagram.png" alt="Architecture Block Diagram" class="fit image"/>
 
 Let's start by creating the Spring Cloud Config Server.
 
@@ -20,7 +20,7 @@ Let's start by creating the Spring Cloud Config Server.
 
  Create a blank maven project in your IDE of choice. For this project I'll be using Idea intelliJ IDE. Once the project is fully setup the folder structure is going to look like this.
 
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png" alt="Config Server Folder Structure"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_config_server_folder_structure.png" alt="Config Server Folder Structure" class="fit image"/>
 
 Lets start by modifying pom.xml of the project and add following items.
 
@@ -149,10 +149,10 @@ Spring Cloud Config server setup is complete. Run the _NarratorConfigServerStart
 To check if config server is up and is serving the configuration for client applications you can fire http requests using any REST api client like postman.
 
 <h2>Http Response for User Configuration for the <i>default</i> profile</h2>
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png" alt="Order Client Folder Structure"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_default_user.png" class="fit image" alt="Order Client Folder Structure"/>
 
 <h2>Http Response for User Configuration for the <i>qa</i> profile</h2>
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png" alt="Order Client Folder Structure"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png" class="fit image" alt="Order Client Folder Structure"/>
 
 Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.  
 
@@ -166,7 +166,7 @@ We'll create the user application which will act as a client for the config serv
 
 Once done the folder structure is going to look like this.
 
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png" alt="User Client Folder Structure"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_user_client_folder_structure.png" alt="User Client Folder Structure" class="fit image"/>
 
 Create a new maven application and modify the pom.xml to make this application a Springboot application. Next, add the dependencies for Spring Web Starter and Spring Cloud Config Client packages.
 
@@ -347,7 +347,7 @@ Similar to the User service we're going to create order application which is goi
 
 Once done the folder structure is going to look like this.
 
-<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png" alt="Order Client Folder Structure"/>
+<img src="/images/2019-03-09-spring-cloud-config-file-repo/narrator_order_client_folder_structure.png" alt="Order Client Folder Structure" class="fit image"/>
 
 <h3>pom.xml</h3>
 
