@@ -5,9 +5,9 @@ categories: Spring-Cloud
 image:  /images/bg.jpg
 ---
 
-Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repositories and how to make your services can act as clients to the config server.
+Handling configurations for applications in a microservice based architecture can turn into a maintenance nightmare. Spring Cloud Config provides a viable solution for this problem by externalising application configurations. This post talks about how to setup Spring Config Server with file based config repository and how to make your services act as clients to the config server.
 
-To demonstrate the Spring Cloud Config server setup and usage we'll be creating an application called Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different sub-applications deployed separately.
+To demonstrate the Spring Cloud Config server setup and usage we'll be creating an application titled Narrator. This is an eCommerce application that can be used to buy Audio Books. This application has microservice based architecture with 2 different components (sub-applications) deployed separately.
 
 * User
 * Order
@@ -25,7 +25,7 @@ Let's start by creating the Spring Cloud Config Server.
 Lets start by modifying pom.xml of the project and add following items.
 
  1. Make this a Springboot Application by adding the parent tag. At the time of writing this blog post the latest stable version of Springboot is _2.1.3.RELEASE_.
- 2. Add the dependency management tag for getting the bill of material for config server.
+ 2. Add the dependency management tag for getting bill of material for config server.
  3. Add dependency for Spring Cloud Config Starter and the Spring Cloud Config Server.
 
 <h3>pom.xml</h3>
@@ -70,9 +70,9 @@ Lets start by modifying pom.xml of the project and add following items.
 
 {% endhighlight %}
 
-After adding all these dependencies in pom.xml maven is going to fetch all the required jars for you and add them to the application's classpath. The next step now is to create the starter class which will be run to start the Spring Cloud Config server.
+After adding all these dependencies in pom.xml maven is going to fetch all the required jars for you and add them to application's classpath. The next step now is to create the starter class which will be run to start Spring Cloud Config server.
 
-Lets call this class _NarratorConfigServerStarter.java_. In this class specify that the application is a Springboot application by adding the annotation _@SpringBootApplication_. To make this Springboot application a Spring Cloud Config Server add the annotation _@EnableConfigServer_.
+Lets call this class _NarratorConfigServerStarter.java_. In this class we specify that the application is a Springboot application by adding the annotation _@SpringBootApplication_. To make this Springboot application a Spring Cloud Config Server add the annotation _@EnableConfigServer_.
 
 <h3>NarratorConfigServerStarter.java</h3>
 
@@ -116,7 +116,7 @@ Start by adding directories named _order_ and _user_ in the local system. Next a
 country=IN
 {% endhighlight %}
 
-Different property files for different environments can be added to the config repository. Here we are going to add another property file for order application for the _qa_ environment. Notice the naming convention of the property file.
+Different property files for different environments can be added to the config repository. Here we are going to add another property file for order application for the _qa_ environment. Notice naming convention of the property file.
 
 <h3>order-qa.properties</h3>
 
@@ -154,7 +154,7 @@ To check if config server is up and is serving the configuration for client appl
 <h2>Http Response for User Configuration for the <i>qa</i> profile</h2>
 <img src="/images/2019-03-09-spring-cloud-config-file-repo/postman_qa_user.png" class="fit image" alt="Order Client Folder Structure"/>
 
-Default profile configuration will be overwritten by the profile specify configuration when the config is requested by client application. As you can see when you make a REST request directly to the config server you get configuration for both default and selected profile.  
+Default profile configurations will be overwritten by the profile specific configuration when config is requested by client application. As you can see when you make a REST request directly to the config server you get configurations for both default and specified profile.  
 
 Config server for Narrator application is ready to accept requests from client applications.
 
@@ -162,7 +162,7 @@ Now lets create couple of client applications for the config server. These appli
 
 <h2>Spring Cloud Config Client - User</h2>
 
-We'll create the user application which will act as a client for the config server. This is a REST based application with 2 layers - REST Controller layer and Service layer.
+We'll create the user application which will act as a client for the config server. This is a REST based application with 2 layers - REST Controller layer and Service layer. For simplicity we are not going to create the repository layer which usually talks to the database.
 
 Once done the folder structure is going to look like this.
 
@@ -271,7 +271,7 @@ Now add _UserService.java_ class containing business logic for the user applicat
 @Service
 public class UserService {
 
-    //  Getting the value for this field from the configuration sent by config server  
+    //  Getting the value for this field from configuration sent by config server
     @Value("${privacy.enabled}")
     private String privacyEnabled;
 
@@ -327,7 +327,7 @@ server.port=8182
 
 {% endhighlight %}
 
-Now comes the step where you'll specify the details of config server. Add a file _bootstrap.properties_ which will contain URI of config server and name of the application. This name will be used by the config server to identify the configuration set for the application. Also, in this file you specify the environment for which the configuration is to be fetched from the config server.
+Now comes the step where you'll specify the details of config server. Add a file _bootstrap.properties_ which will contain URI of config server and name of the application. This name will be used by the config server to identify configuration set for the application. Also, in this file you specify the environment for which the configuration is to be fetched from the config server.
 
 Configuration present in the _bootstrap.properties_ file is loaded before any other configuration.
 
