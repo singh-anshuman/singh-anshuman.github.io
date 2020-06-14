@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to get most out of productivity books"
+title:  "How to Get Most Out of Productivity Books"
 categories: Productivity
 image:  /images/bg.jpg
 ---
