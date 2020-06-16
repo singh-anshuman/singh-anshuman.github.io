@@ -9,6 +9,8 @@ image:  /images/bg.jpg
 
 - But still we come accross people in our life who are not doing great but claim to have been reading a LOT of productivity and other self improvement books.
 
+- These people fall in the trap of consuming too much content and not acting on any of it.
+
 - < Get a reference for this > An average CEO reads about 50 books per year.
 
 - So if you look at these 2 sets of people you would realize that to get the maximum value out of any book, how you read a book also matters a lot apart from the contents of the book.
