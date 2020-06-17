@@ -11,12 +11,12 @@ But still we all have come accross people in our life who are not doing great bu
 
 On the other hand according to a survey conducted recently, an average CEO reads about 40 to 50 books per year. So if you consider CEOs to be highly accompalished individuals you can realise that not just the content of these books but also how once reads a book matters a lot.
 
-The Trap
+###### The Trap
 This is largely due to the fact that most people wall in the classic trap of consuming too much content and not acting on any of it.
 
 < EXPAND >
 
-Realization vs Knowledge vs Applied Knowledge
+###### Realization vs Knowledge vs Applied Knowledge
 When we first come across an idea that resonates with us where we enter a state of realization as we begin to link the idea with our own experiences.
 
 < EXAMPLE >
@@ -29,7 +29,7 @@ Only when you start applying this newly acquired knowledge while solving your pr
 - If you don't make sure that you are closing this last phase, sadly there will be no rewards to be enjoyed.  
 
 
-The How
+###### The How
 I've been experimenting with ways of  
 - The plan I follow while reading productivity and other self improvement books.
 
