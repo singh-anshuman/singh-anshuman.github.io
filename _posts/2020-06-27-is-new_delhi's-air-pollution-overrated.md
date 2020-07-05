@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Is Delhi's Air Pollution Overrated ?"
+title:  "Is New Delhi's Air Pollution Overrated ?"
 categories: Environment
 image:  /images/bg.jpg
 ---
 
-<h2> Is Delhi's Air Pollution Overrated ? </h2>
+Every resident of New Delhi and adjoining cities like Gurugram, Noida, Gaziabad, Faridabad, etc. is a stakeholder in this debate. 
 
-If anything Delhi's air pollution is highly underrated.
+Having collected a lot of data and spent hours researching on this topic (and also having lived through the pollution season), if you ask me, I would say that if anything Delhi's air pollution is highly UNDERRATED.
 
 #### Why is it a big deal ?
 
